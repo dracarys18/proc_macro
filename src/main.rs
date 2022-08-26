@@ -1,8 +1,8 @@
-use promacro::{context, no_unwrap, wtf};
+use promacro::{no_unwrap, reference, wtf};
 
 wtf!();
 
-#[context]
+#[reference]
 pub fn lol(n: i32, f: &[i32], l: i32) {
     println!("{:?}", n);
 }
