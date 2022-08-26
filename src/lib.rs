@@ -32,7 +32,7 @@ fn unwrap(f: syn::Item) -> Result<(), syn::Error> {
             if let syn::Stmt::Semi(syn::Expr::MethodCall(m), _) = s {
                 let ident = &m.method;
                 if ident.eq(&Ident::new("unwrap", Span::call_site())) {
-                    return Err(syn::Error::new(s.span(), "Gaand ke andhe unwrap hatha"));
+                    return Err(syn::Error::new(ident.span(), "Gaand ke andhe unwrap hatha"));
                 }
             }
         }
