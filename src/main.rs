@@ -1,19 +1,13 @@
-use promacro::{no_unwrap, reference, wtf};
+use promacro::{no_unwrap, reference, wtf, TestBuilder};
 
 wtf!();
 
-#[reference]
-pub fn lol(n: i32, f: &[i32], l: i32) {
-    println!("{:?}", n);
+#[derive(Debug, TestBuilder)]
+struct Test {
+    n: Vec<i32>,
 }
-
-#[no_unwrap]
-pub fn kek() {
-    let n: Option<i32> = None;
-    n.unwrap();
-}
-
 fn main() {
-    lol(1, &[1, 2], 2);
-    println!("{}", lmao());
+    let mut builder = Test::builder();
+    builder.with_n(vec![3]);
+    println!("{:?}", builder.build());
 }
