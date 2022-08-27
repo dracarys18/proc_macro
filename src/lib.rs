@@ -61,7 +61,7 @@ pub fn builder(input: TokenStream) -> TokenStream {
     let build_f = fields.iter().map(|f| {
         let name = f.ident.as_ref().unwrap();
         quote! {
-            #name: self.#name.clone().ok_or(format!("{} is not set bruh",stringify!(#name)))?
+            #name: self.#name.clone().ok_or(format!("{} is not set bruh. Set it with {}::with_{}",stringify!(#name),stringify!(#struc),stringify!(#name)))?
         }
     });
 
