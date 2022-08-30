@@ -33,7 +33,6 @@ pub fn optional(_: TokenStream, input: TokenStream) -> TokenStream {
         }
     });
     let new_struct: TokenStream = quote! {
-    #[automatically_derived]
     #(#attrs)*
     pub struct #struc {
         #(#build_fields,)*

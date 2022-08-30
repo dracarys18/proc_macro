@@ -1,9 +1,9 @@
 #[macro_use]
-extern crate optional;
+extern crate builder;
 
-#[optional]
-#[derive(Default, Debug)]
+#[derive(Default, Debug, Builder)]
 struct Test {
+    #[def = "0"]
     n: u32,
 }
 fn main() {

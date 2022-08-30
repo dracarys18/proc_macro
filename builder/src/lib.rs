@@ -3,7 +3,7 @@ use quote::quote;
 use syn::{self, parse_macro_input, DeriveInput};
 
 /// A derive macro which generates the builder struct for any parent struct
-#[proc_macro_derive(TestBuilder, attributes(def))]
+#[proc_macro_derive(Builder, attributes(def))]
 pub fn builder(input: TokenStream) -> TokenStream {
     let input = parse_macro_input!(input as DeriveInput);
     let ident = &input.ident;
