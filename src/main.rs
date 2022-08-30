@@ -1,6 +1,5 @@
-use promacro::{no_unwrap, optional, reference, wtf, TestBuilder};
-
-wtf!();
+#[macro_use]
+extern crate optional;
 
 #[optional]
 #[derive(Default, Debug)]
