@@ -2,7 +2,7 @@
 extern crate optional;
 
 #[optional]
-#[derive(Debug)]
+#[derive(Default, Debug)]
 struct Test {
     n: u32,
 }

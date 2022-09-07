@@ -41,6 +41,7 @@ pub fn optional(_: TokenStream, input: TokenStream) -> TokenStream {
                 #[derive(Default)]
             };
             attrs.push(default);
+            return;
         }
     });
     let new_struct: TokenStream = quote! {
