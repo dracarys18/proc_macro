@@ -12,4 +12,5 @@ This proc macro creates a builder struct for the given struct. Panics if there i
 This proc macro creates an Optional struct which makes all the fields option.The new struct includes all the attributes
 from parent struct. Useful while updating a struct in the Database.
 
-
+- ```ternary!(2==2?"Yes":"No")```
+This proc macro makes you to use ternary operators like it is in java in rust.
